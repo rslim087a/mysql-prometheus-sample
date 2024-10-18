@@ -1,0 +1,14 @@
+mysql:
+  host: "mysql.database-monitoring.svc.cluster.local"
+  port: 3306
+  user: "mysqluser"
+  pass: "userpassword"
+  existingSecret: "mysql-secret"
+  existingSecretKey: "MYSQL_PASSWORD"
+
+serviceMonitor:
+  enabled: true
+  interval: 30s
+  scrapeTimeout: 10s
+  labels:
+    release: prometheus
