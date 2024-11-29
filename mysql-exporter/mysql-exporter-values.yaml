@@ -3,9 +3,7 @@ mysql:
   port: 3306
   user: "mysqluser"
   pass: "userpassword"
-  existingSecret: "mysql-secret"
-  existingSecretKey: "MYSQL_PASSWORD"
-
+  
 serviceMonitor:
   enabled: true
   interval: 30s
