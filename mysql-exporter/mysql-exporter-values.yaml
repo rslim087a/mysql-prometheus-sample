@@ -2,8 +2,11 @@ mysql:
   host: "mysql.database-monitoring.svc.cluster.local"
   port: 3306
   user: "mysqluser"
-  pass: "userpassword"
-  
+  existingPasswordSecret:
+    name: "mysql-secret"
+    key: "MYSQL_PASSWORD"
+
+    
 serviceMonitor:
   enabled: true
   interval: 30s
